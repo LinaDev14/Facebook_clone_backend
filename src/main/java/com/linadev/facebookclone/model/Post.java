@@ -21,4 +21,5 @@ public class Post {
     private String image;
     private String profilePic;
     private String timeStamp;
+    private String file;
 }
