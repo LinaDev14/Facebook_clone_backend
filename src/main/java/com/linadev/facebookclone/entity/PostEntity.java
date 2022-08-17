@@ -22,7 +22,7 @@ public class PostEntity {
     private String id;
 
     @Lob
-    private String post;
+    private String fbPost;
     private String name;
     private String email;
 
