@@ -1,3 +1,8 @@
 package com.linadev.facebookclone.service;
-public class PostService {
+
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class PostService implements PostServiceInterface{
 }
