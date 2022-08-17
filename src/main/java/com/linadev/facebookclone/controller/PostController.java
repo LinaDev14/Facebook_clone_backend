@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 
@@ -20,7 +21,7 @@ public class PostController {
 
 
     @PostMapping("")
-    public Post addPost(@RequestParam Map<String, String> requestParams){
+    public Post addPost(@RequestParam Map<String, String> requestParams) throws Exception {
 
         String strPost = requestParams.get("post");
         String email = requestParams.get("email");
@@ -39,5 +40,10 @@ public class PostController {
         post = postService.addPost(post);
 
         return post;
+    }
+
+    @GetMapping
+    public List<Post> getPost(){
+        return postService.getPost();
     }
 }
